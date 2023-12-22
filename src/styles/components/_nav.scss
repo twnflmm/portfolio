@@ -1,0 +1,128 @@
+.nav {
+	display: flex;
+	gap: rem(75px);
+	align-items: center;
+	font-size: rem(18px);
+
+	&__list {
+		display: flex;
+		gap: rem(60px);
+		align-items: center;
+
+		@media (max-width: $medium) {
+			gap: 30px;
+		}
+	}
+
+	&__link {
+		transition: color .3s ease;
+
+		&:hover {
+			color: $violet;
+			transition: color .3s ease;
+		}
+
+		@media (max-width: $small) {
+			font-size: 14px;
+		}
+	}
+}
+
+.burger {
+	position: relative;
+	display: none;
+	height: 21px;
+	width: 40px;
+	z-index: 1000;
+	cursor: pointer;
+
+	span {
+		display: block;
+		height: 2px;
+		width: 100%;
+		background-color: $black;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			height: 2px;
+			width: 100%;
+			background-color: $black;
+			transition: all .3s;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 2px;
+			width: 100%;
+			background-color: $black;
+			transition: all .3s;
+		}
+	}
+
+	&.active {
+		span {
+			height: 0;
+
+			&::before {
+				transform: rotate(45deg);
+				transform-origin: 15% 15%;
+				transition: all .3s;
+			}
+
+			&::after {
+				transform: rotate(-45deg);
+				transform-origin: 15% 95%;
+				transition: all .3s;
+			}
+		}
+	}
+
+	@media (max-width: $large) {
+		display: block;
+	}
+}
+
+.menu {
+	width: 100%;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__item {
+		border-top: 1px solid #000;
+
+		&:last-child {
+			border-bottom: 1px solid #000;
+		}
+	}
+
+	&__link {
+		padding: 10px 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		background-color: $white;
+	}
+
+	&__socials {
+		padding-top: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $white;
+	}
+}

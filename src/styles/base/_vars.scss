@@ -1,0 +1,14 @@
+@function rem($size) {
+   $remSize: calc($size / 16px);
+   @return #{$remSize}rem;
+}
+
+$violet: #7f00ff;
+$gray: #3d535f;
+$black: #000;
+$white: #fff;
+
+$extraLarge: 1200px;
+$large: 992px;
+$medium: 768px;
+$small: 576px;

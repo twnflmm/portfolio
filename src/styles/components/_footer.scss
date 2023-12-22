@@ -1,0 +1,23 @@
+.footer {
+	outline: solid;
+	padding: 20px 0;
+	color: $gray;
+
+	&__container {
+		display: flex;
+		gap: 30px;
+		align-items: center;
+		justify-content: space-between;
+
+		@media (max-width: $small) {
+			flex-direction: column-reverse;
+			gap: 10px;
+		}
+	}
+
+	&__copyright {
+		@media (max-width: $small) {
+			font-size: 14px;
+		}
+	}
+}

@@ -1,0 +1,168 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: rem(16px);
+  line-height: 140%;
+  color: $black;
+}
+
+input,
+textarea,
+button,
+select {
+  border: none;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {}
+
+a {
+  font: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+section {
+  position: relative;
+}
+
+picture {
+  height: 100%;
+
+  img {
+    display: flex;
+    align-items: end;
+  }
+}
+
+.title {
+  display: block;
+  font-weight: 900;
+  font-size: rem(72px);
+  line-height: 140%;  
+  color: $gray;
+
+  &--center {
+    text-align: center;
+  }
+
+  span {
+    color: $violet;
+    text-transform: capitalize;
+  }
+
+  @media (max-width: $extraLarge) {
+    font-size: rem(56px);
+  }
+
+  @media (max-width: $medium) {
+    font-size: rem(42px);
+  }
+
+  @media (max-width: $small) {
+    font-size: rem(36px);
+  }
+}
+
+.title-small {
+  display: block;
+  font-weight: 900;
+  font-size: rem(36px);
+  line-height: 140%;  
+  color: $gray;
+
+  @media (max-width: $extraLarge) {
+    font-size: rem(28px);
+  }
+
+  @media (max-width: $medium) {
+    font-size: rem(24px);
+  }
+
+  @media (max-width: $small) {
+    font-size: rem(20px);
+  }
+}
+
+.subtitle {
+  line-height: 140%;
+  font-size: rem(20px);
+  color: $violet;
+
+  &--center {
+    text-align: center;
+  }
+
+  @media (max-width: $extraLarge) {
+    font-size: rem(18px);
+  }
+
+  @media (max-width: $medium) {
+    font-size: rem(16px);
+  }
+
+  @media (max-width: $small) {
+    font-size: rem(14px);
+  }
+}
+
+.paragraph {
+  line-height: 140%;
+  font-size: rem(18px);
+  color: $gray;
+
+  &--center {
+    text-align: center;
+  }
+
+  @media (max-width: $extraLarge) {
+    font-size: rem(16px);
+  }
+
+  @media (max-width: $medium) {
+    font-size: rem(14px);
+  }
+
+  @media (max-width: $medium) {
+    font-size: rem(12px);
+  }
+}
