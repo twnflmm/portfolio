@@ -25,6 +25,35 @@
 		display: flex;
 		gap: 15px;
 		align-items: center;
+
+		&:hover {
+			.contact__icon {
+				transform: scale(1.4);
+				border: 2px solid $white;
+				transition: all .3s ease;
+			}
+
+			.contact__text::before {
+				width: 100%;
+				transition: width .3s ease;
+			}
+		}
+	}
+
+	&__text {
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 0%;
+			height: 2px;
+			background-color: $black;
+			transition: width .3s ease;
+		}
 	}
 
 	&__icon {
@@ -35,6 +64,7 @@
 		height: 50px;
 		border: 2px solid $black;
 		border-radius: 50%;
+		transition: all .3s ease;
 
 		svg {
 			width: 60%;
