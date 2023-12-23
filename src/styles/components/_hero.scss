@@ -151,10 +151,12 @@
 		@media (max-width: $extraLarge) {
 			right: 10%;
 			height: 580px;
+			width: 375px;
 		}
 
 		@media (max-width: $medium) {
-			height: 250px;	
+			height: 250px;
+			width: 161px;
 		}
 
 		@media (max-width: $small) {
